@@ -1,6 +1,2 @@
 # FatmanHerosTmp
 fatman
-#hoge
-
-
-###hgoe
