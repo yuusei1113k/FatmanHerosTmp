@@ -10,7 +10,7 @@ public class EnemyC : MonoBehaviour {
 	
 	private Vector3 targetPosition;
 	
-	private float changeTargetSqrDistance = 6f;
+	private float changeTargetSqrDistance = 40f;
 	
 	private void Start()
 	{
@@ -38,7 +38,7 @@ public class EnemyC : MonoBehaviour {
 	
 	public Vector3 GetRandomPositionOnLevel()
 	{
-		float levelSize = 8f;
+		float levelSize = 55f;
 		return new Vector3(Random.Range(-levelSize, levelSize), 0, Random.Range(-levelSize, levelSize));
 	}
 }
