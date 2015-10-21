@@ -12,4 +12,7 @@ public class Trigger : MonoBehaviour {
 	void Update () {
 	
 	}
+	
+	
+	//uwaaaaaaa
 }
