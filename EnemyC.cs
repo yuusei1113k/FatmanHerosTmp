@@ -7,7 +7,10 @@ public class EnemyC : MonoBehaviour {
 
 	private float speed = 10f;
 	private float rotationSmooth = 1f;
+<<<<<<< HEAD
 
+=======
+>>>>>>> afdc0a601d1326741ae8335a763fe1ff013aa9cd
 	public int hp = 1;
 	
 	private Vector3 targetPosition;
@@ -43,10 +46,13 @@ public class EnemyC : MonoBehaviour {
 		float levelSize = 55f;
 		return new Vector3(Random.Range(-levelSize, levelSize), 0, Random.Range(-levelSize, levelSize));
 	}
+<<<<<<< HEAD
 	void OnTriggerEnter(Collider coll) {
 		if (coll.gameObject.tag == "Player") {
 			//Instantiate(Explosion, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
 			Destroy(this.gameObject);
 		}
 	}
+=======
+>>>>>>> afdc0a601d1326741ae8335a763fe1ff013aa9cd
 }
