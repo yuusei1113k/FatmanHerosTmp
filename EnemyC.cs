@@ -7,6 +7,8 @@ public class EnemyC : MonoBehaviour {
 
 	private float speed = 10f;
 	private float rotationSmooth = 1f;
+
+	public int hp = 1;
 	
 	private Vector3 targetPosition;
 	
@@ -40,5 +42,11 @@ public class EnemyC : MonoBehaviour {
 	{
 		float levelSize = 55f;
 		return new Vector3(Random.Range(-levelSize, levelSize), 0, Random.Range(-levelSize, levelSize));
+	}
+	void OnTriggerEnter(Collider coll) {
+		if (coll.gameObject.tag == "Player") {
+			//Instantiate(Explosion, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+			Destroy(this.gameObject);
+		}
 	}
 }

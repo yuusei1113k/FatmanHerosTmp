@@ -5,8 +5,9 @@ public class EnemyB : MonoBehaviour {
 
 	public Transform player;    //プレイヤーを代入
 	public float speed = 20; //移動速度
-	public float limitDistance = 1000f; //敵キャラクターがどの程度近づいてくるか設定(この値以下には近づかない）
-	
+	public float limitDistance = 50f; //敵キャラクターがどの程度近づいてくるか設定(この値以下には近づかない）
+	public int hp = 1;
+
 	private bool isGround = false;
 	
 	//ゲーム開始時に一度
@@ -37,7 +38,8 @@ public class EnemyB : MonoBehaviour {
 		
 		//プレイヤーの方を向く
 		transform.rotation = Quaternion.LookRotation(direction);
-		
+
+
 		/*//重力落下処理（プレイヤーの距離関係なく下に移動する）
 		Vector3 rayPos = transform.position;
 		rayPos.y -= 1f;
@@ -55,5 +57,11 @@ public class EnemyB : MonoBehaviour {
 		if (transform.position.y <= -5f) {
 			Destroy(gameObject);
 		}*/
+	}
+	void OnTriggerEnter(Collider coll) {
+		if (coll.gameObject.tag == "Player") {
+			//Instantiate(Explosion, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+			Destroy(this.gameObject);
+		}
 	}
 }
