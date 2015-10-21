@@ -1,3 +1,0 @@
-# FatmanHerosTmp
-fatman
-hoge
