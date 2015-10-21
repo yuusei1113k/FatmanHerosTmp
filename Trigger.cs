@@ -14,5 +14,4 @@ public class Trigger : MonoBehaviour {
 	}
 	
 	
-	//uwaaaaaaa
 }
