@@ -43,7 +43,11 @@ public class EnemyB : MonoBehaviour {
 
 =======
 		
+<<<<<<< HEAD
 >>>>>>> remotes/origin/takaN
+=======
+>>>>>>> afdc0a601d1326741ae8335a763fe1ff013aa9cd
+>>>>>>> a1324c4787b69fa88e4f947d70da93e6ba7eb2bf
 		/*//重力落下処理（プレイヤーの距離関係なく下に移動する）
 		Vector3 rayPos = transform.position;
 		rayPos.y -= 1f;
@@ -70,5 +74,9 @@ public class EnemyB : MonoBehaviour {
 		}
 	}
 =======
+<<<<<<< HEAD
 >>>>>>> remotes/origin/takaN
+=======
+>>>>>>> afdc0a601d1326741ae8335a763fe1ff013aa9cd
+>>>>>>> a1324c4787b69fa88e4f947d70da93e6ba7eb2bf
 }

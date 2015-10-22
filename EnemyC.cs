@@ -10,7 +10,11 @@ public class EnemyC : MonoBehaviour {
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
 >>>>>>> remotes/origin/takaN
+=======
+>>>>>>> afdc0a601d1326741ae8335a763fe1ff013aa9cd
+>>>>>>> a1324c4787b69fa88e4f947d70da93e6ba7eb2bf
 	public int hp = 1;
 	
 	private Vector3 targetPosition;
@@ -54,5 +58,9 @@ public class EnemyC : MonoBehaviour {
 		}
 	}
 =======
+<<<<<<< HEAD
 >>>>>>> remotes/origin/takaN
+=======
+>>>>>>> afdc0a601d1326741ae8335a763fe1ff013aa9cd
+>>>>>>> a1324c4787b69fa88e4f947d70da93e6ba7eb2bf
 }

@@ -9,6 +9,7 @@ public class Player : MonoBehaviour {
     //タッチされた座標
     private Vector2 touch;
 
+<<<<<<< HEAD
     //フリック判定用タッチ判定時間
     private double touchJdg = 0.08;
 
@@ -34,6 +35,11 @@ public class Player : MonoBehaviour {
     private double y;
     private double z;
     
+=======
+    //タッチ後移動した座標
+    private Vector2 dragPoint;
+
+>>>>>>> a1324c4787b69fa88e4f947d70da93e6ba7eb2bf
     //回転速度
     private float rotationSpeed = 10000.0f;
 
@@ -49,23 +55,32 @@ public class Player : MonoBehaviour {
 
     public void move()
     {
+<<<<<<< HEAD
         //タッチされた瞬間のみ
+=======
+>>>>>>> a1324c4787b69fa88e4f947d70da93e6ba7eb2bf
         if (Input.GetMouseButtonDown(0))
         {
             //タッチされた座標を取得
             touch = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+<<<<<<< HEAD
             touchTime = 0;
             //タッチされるたびにフリック判定を初期化
             flickOk = false;
         }
 
         //タッチされている間
+=======
+        }
+
+>>>>>>> a1324c4787b69fa88e4f947d70da93e6ba7eb2bf
         if (Input.GetMouseButton(0))
         {
             //タッチ後移動した座標
             dragPoint = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 
             //プレイヤーが移動するベクトル
+<<<<<<< HEAD
             x = dragPoint.x - touch.x;
             y = 0;
             z = dragPoint.y - touch.y;
@@ -101,6 +116,17 @@ public class Player : MonoBehaviour {
             {
                 //入力をVector3に変換/移動量を制限
                 direction = new Vector3((float)x, (float)y, (float)z) / 1000;
+=======
+            float x = dragPoint.x - touch.x;
+            float y = 0;
+            float z = dragPoint.y - touch.y;
+
+            if (dragPoint != touch)
+            {
+                //入力をVector3に変換移動量を制限
+                Vector3 direction = new Vector3(x, y, z) / 1000;
+                //print("direction: " + direction);
+>>>>>>> a1324c4787b69fa88e4f947d70da93e6ba7eb2bf
 
                 //入力ベクトルをQuaternionに変換
                 Quaternion to = Quaternion.LookRotation(direction);
@@ -111,6 +137,7 @@ public class Player : MonoBehaviour {
                 //タッチされた座標を画面上の座標に変換
                 Vector3 cm = Camera.main.ScreenToWorldPoint(direction);
                 Vector3 moveTo = new Vector3(cm.x * -1, 0, cm.z * -1) / 100;
+<<<<<<< HEAD
 
                 //移動
                 transform.Translate(moveTo * speed);
@@ -130,6 +157,13 @@ public class Player : MonoBehaviour {
 
                 //ジャンプ
                 //transform.Translate(flickJump / 10);
+=======
+                print("moveTo: " + moveTo);
+
+                //移動
+                transform.Translate(moveTo * speed);
+                //print("rotation: " + transform.rotation.y);
+>>>>>>> a1324c4787b69fa88e4f947d70da93e6ba7eb2bf
             }
         }
     }
