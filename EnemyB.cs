@@ -38,8 +38,12 @@ public class EnemyB : MonoBehaviour {
 		
 		//プレイヤーの方を向く
 		transform.rotation = Quaternion.LookRotation(direction);
+<<<<<<< HEAD
 
 
+=======
+		
+>>>>>>> remotes/origin/takaN
 		/*//重力落下処理（プレイヤーの距離関係なく下に移動する）
 		Vector3 rayPos = transform.position;
 		rayPos.y -= 1f;
@@ -58,10 +62,13 @@ public class EnemyB : MonoBehaviour {
 			Destroy(gameObject);
 		}*/
 	}
+<<<<<<< HEAD
 	void OnTriggerEnter(Collider coll) {
 		if (coll.gameObject.tag == "Player") {
 			//Instantiate(Explosion, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
 			Destroy(this.gameObject);
 		}
 	}
+=======
+>>>>>>> remotes/origin/takaN
 }
